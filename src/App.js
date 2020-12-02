@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <div className="AppTitle">COVID TRACKER</div>
-      {data.length && (
+      {data.length !== 0 && (
         <div>
           <div className="Global Section">
             <div className="GlobalSectionTitle">Global Statistics</div>
