@@ -1,38 +1,177 @@
 .App {
   text-align: center;
+  width: 480px;
+  margin: auto;
+  box-shadow: 0px 0px 2px black;
+  height: 100vh;
+  background-image: url(https://cdn.suwalls.com/wallpapers/abstract/gray-pattern-42899-2560x1600.jpg);
+  background-size: 300%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.AppTitle {
+  font-weight: bold;
+  color: #ff6c47;
+  padding: 10px;
+  letter-spacing: 1px;
+  font-size: large;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#countryList {
+  width: 80%;
+  margin: 1px;
+  border: none;
+  padding: 8px;
+  box-shadow: 0px 0px 2px black;
+  outline: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(43, 43, 43);
+  background-color: white;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#countryList option {
+  color: rgb(75, 75, 75);
+}
+
+.PieChartContainer {
+  width: calc(100% - 40px);
+  margin: auto;
+  padding: 20px;
+}
+
+.test-color {
+  background-color: #ffec3e;
+}
+
+.Section {
+  background-color: white;
+  padding: 5px;
+  margin: 10px;
+  margin-top: 5px;
+  box-shadow: 0px 0px 4px black;
+  border-radius: 5px;
+  border-spacing: 2px;
+}
+
+.CountrySectionTitle,
+.GlobalSectionTitle {
+  letter-spacing: 2px;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.Chart {
+  background-color: rgb(53, 53, 53);
+  background-image: url(https://cdn.suwalls.com/wallpapers/abstract/gray-pattern-42899-2560x1600.jpg);
+  padding: 5px;
+  background-size: 180%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.ChartLegend {
+  margin: auto;
   display: flex;
+  width: 60%;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px;
+}
+
+.ChartLegend .Cases {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.legendName {
+  letter-spacing: 2px;
+}
+.legendFigure {
+  font-size: small;
+  letter-spacing: 1px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.Cases .legendFigure,
+.Cases .legendName {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Active .legendFigure,
+.Active .legendName {
+  color: #ffec3e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Recovered .legendFigure,
+.Recovered .legendName {
+  color: #1f9aff;
+}
+
+.Death .legendFigure,
+.Death .legendName {
+  color: #ff6c47;
+}
+
+.GlobalSectionBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(53, 53, 53);
+  background-image: url(https://cdn.suwalls.com/wallpapers/abstract/gray-pattern-42899-2560x1600.jpg);
+  background-size: 180%;
+  border-radius: 4px;
+}
+
+.GlobalDataBox {
+  flex-grow: 1;
+}
+
+.GlobalDataBox .Title {
+  font-size: small;
+  color: white;
+}
+.GlobalDataBox .Figure {
+  font-size: large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.GlobalDataBox .Total {
+  color: #ffcc3e;
+}
+
+.GlobalDataBox .Active {
+  color: #ff7b3e;
+}
+.GlobalDataBox .Death {
+  color: hsl(0, 100%, 50%);
+}
+.GlobalDataBox .Recovered {
+  color: #57dd0a;
+}
+
+@media all and (max-width: 480px) {
+  .App {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .GlobalSectionBody {
+    flex-direction: column;
+  }
+  .GlobalDataBox {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .GlobalDataBox div {
+    padding: 3px;
+    flex: 1;
+    text-align: left;
   }
 }
